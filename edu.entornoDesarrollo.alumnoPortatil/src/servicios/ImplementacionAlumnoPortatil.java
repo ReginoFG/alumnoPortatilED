@@ -9,7 +9,7 @@ import entidades.RelacionAlumnoPortatil;
 public class ImplementacionAlumnoPortatil implements InterfazAlumnoPortatil {
 
 	@Override
-	public List<RelacionAlumnoPortatil> matriculaAlumno(List<RelacionAlumnoPortatil> listaAntigua) {
+	public void matriculaAlumno(List<RelacionAlumnoPortatil> listaAntigua) {
 		RelacionAlumnoPortatil nuevaMatricula = new RelacionAlumnoPortatil();
 		Scanner entrada = new Scanner(System.in);
 		System.out.print("Dime el nombre: ");
@@ -25,7 +25,6 @@ public class ImplementacionAlumnoPortatil implements InterfazAlumnoPortatil {
 		nuevaMatricula.setIdentificadorPortatil(concatenacionMarcaModelo(nuevaMatricula.getMarcaPortatil(),nuevaMatricula.getModeloPortatil()));
 		nuevaMatricula.setIdentificadorAlumno(calculoIdAlumno(listaAntigua));		
 		listaAntigua.add(nuevaMatricula);
-		return listaAntigua;
 	}
 	
 	/**
@@ -67,7 +66,7 @@ public class ImplementacionAlumnoPortatil implements InterfazAlumnoPortatil {
 	}
 
 	@Override
-	public List<RelacionAlumnoPortatil> borrarAlumno(List<RelacionAlumnoPortatil> listaAntigua) {
+	public void borrarAlumno(List<RelacionAlumnoPortatil> listaAntigua) {
 		Scanner entrada = new Scanner(System.in);
 		System.out.print("Dime el id del alumno a borrar: ");
 		int idAlumnoBorrar = entrada.nextInt();		
@@ -78,7 +77,6 @@ public class ImplementacionAlumnoPortatil implements InterfazAlumnoPortatil {
 			}			
 		}		
 		listaAntigua.remove(aBorrar);		
-		return listaAntigua;
 	}
 
 	@Override

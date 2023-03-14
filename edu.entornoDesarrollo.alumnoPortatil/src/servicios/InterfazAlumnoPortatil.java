@@ -16,14 +16,14 @@ public interface InterfazAlumnoPortatil {
 	 * @param listaAntigua lista que se va a actualizar con la nueva matrícula
 	 * @return listaNueva lista actualizada
 	 */
-	public List<RelacionAlumnoPortatil> matriculaAlumno(List<RelacionAlumnoPortatil> listaAntigua);
+	public void matriculaAlumno(List<RelacionAlumnoPortatil> listaAntigua);
 
 	/**
 	 * Borrar alumno
 	 * @param listaAntigua lista que se va a actualizar con el borrado de un objeto
 	 * @return listaNueva lista actualizada
 	 */
-	public List<RelacionAlumnoPortatil> borrarAlumno(List<RelacionAlumnoPortatil> listaAntigua);
+	public void borrarAlumno(List<RelacionAlumnoPortatil> listaAntigua);
 	
 	/**
 	 * Listar en consola los alumnos existentes

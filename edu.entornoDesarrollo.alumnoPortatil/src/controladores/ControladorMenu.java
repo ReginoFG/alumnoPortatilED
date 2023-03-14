@@ -58,10 +58,10 @@ public class ControladorMenu {
 			
 			switch (opcion) {			
 				case 1: //Matricula
-					listaRelacionAlumnoPortatil = iap.matriculaAlumno(listaRelacionAlumnoPortatil);					
+					iap.matriculaAlumno(listaRelacionAlumnoPortatil);					
 					break;
 				case 2: //Borrar
-					listaRelacionAlumnoPortatil = iap.borrarAlumno(listaRelacionAlumnoPortatil);			
+					iap.borrarAlumno(listaRelacionAlumnoPortatil);			
 					break;
 				case 3: //Listar alumnos
 					iap.listarAlumnos(listaRelacionAlumnoPortatil);
